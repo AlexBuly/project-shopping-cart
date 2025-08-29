@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.658)
+}
+
+.nav-link:active {
+    color: gray;
+}
+
+
+.item {
+    border: 2px solid black;
+}
+
+.items {
+    display: flex;
+    margin: 1em;
+    gap: 1em;
+}
+
+.shopping-items {
+    display: flex;
+}
