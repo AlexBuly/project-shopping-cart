@@ -4,9 +4,11 @@ export const Shop = () => {
     return (
         <>
             <div className="items">
-                <ShoppingItem name="Shirt"/>
-                <ShoppingItem name="Jacket"/>
-                <ShoppingItem name="Micropave"/>
+                <ShoppingItem id={1}/>
+                <ShoppingItem id={2}/>
+                <ShoppingItem id={3}/>
+                <ShoppingItem id={4}/>
+                <ShoppingItem id={5}/>
             </div>
         </>
     )

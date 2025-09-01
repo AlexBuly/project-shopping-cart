@@ -1,13 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --bg-color: lightblue;
+    --secondary-color: rgb(33, 33, 143);
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--bg-color)
+}
+
+.number-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.product-image {
+    min-height: 100px;
+    max-width: 100px;
+    display: flex;
+    justify-self: center;
+}
+
+.shop-image {
+    max-width: 50%;
+    padding: 1em;
+}
+
+/*.welcome {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh;    
+}*/
+
 nav {
-    background-color: black;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-evenly;
+    padding: 1em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 .nav-link {
@@ -23,17 +66,50 @@ nav {
     color: gray;
 }
 
-
-.item {
-    border: 2px solid black;
+.bottom {
+    display: flex;
+    align-items: center;
 }
 
-.items {
+.shop-link {
+    min-width: 75%;
+}
+
+.item {
+    border: 3px solid;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 1em;
+    background-color: rgb(213, 237, 245);
+    border-radius: 0.5em;
+}
+
+.cart {
     display: flex;
     margin: 1em;
     gap: 1em;
+    justify-content: center;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .shopping-items {
     display: flex;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-size: 400%;
+    font-style: normal;
+    background-color: rgb(33, 33, 143);
+    border-radius: 0.5em;
+    color: white;
+    padding: 1em;
+    margin: 1em;
 }
