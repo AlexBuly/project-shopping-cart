@@ -1,14 +1,14 @@
 import '../styles/App.css'
 import { useState, useEffect } from 'react'
 
-export const ShoppingItem = ({id}) => {
+export const ShoppingItem = ({id, addItem}) => {
     const [count, setCount] = useState(0);
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        async function fetchImage() {
+        async function fetchProduct() {
             try {
                 const response = await fetch(`https://fakestoreapi.com/products/${id}`);
                 if (!response.ok) throw new Error("Failed to fetch product");
@@ -20,7 +20,7 @@ export const ShoppingItem = ({id}) => {
                 setLoading(false);
             }
         }
-        fetchImage();
+        fetchProduct();
     }, [id])
 
     if (loading) return <p>Loading...</p>
@@ -38,17 +38,17 @@ export const ShoppingItem = ({id}) => {
         <>
             <div className="shopping-items">
                 <div className="item">
-                    <p>Name: {product.title}</p>
+                    <p>{product.title}</p>
                     <br />
                     <img src={product.image} className="product-image" alt="product-image" />
                     <br />
-                    <p>Price: {product.price}</p>
+                    <p>{product.price}</p>
                     <div className="number-btns">
                         <button onClick={decrement}>-</button>
                         <p>{count}</p>
                         <button onClick={increment}>+</button>
                     </div>
-                    <button className="add-to-cart">Add to Cart</button>
+                    <button onClick={() => addItem(product, count)}>Add to Cart</button>
                 </div>
             </div>
         </>
