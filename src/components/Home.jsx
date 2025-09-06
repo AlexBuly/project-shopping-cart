@@ -9,7 +9,7 @@ export const Home = () => {
                 <h1>Welcome to our shop!</h1>
                 <div className="bottom">
                      <img src={shopImage} className="shop-image" alt="shop" />
-                     <Link to="shop" className="shop-link">Shop now</Link>
+                     <Link to="/shop" className="shop-link">Shop now</Link>
                 </div>
             </div>
         </>

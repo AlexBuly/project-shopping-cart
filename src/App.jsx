@@ -12,9 +12,8 @@ function App() {
         if (existing) {
           // update quantity
           return prev.map(item =>
-            item.id === product.id
-              ? { ...item, quantity: item.quantity + count }
-              : item
+            item.id === product.id ? { ...item, quantity: item.quantity + count }
+            : item
           );
         }
         return [...prev, { ...product, quantity: count }];

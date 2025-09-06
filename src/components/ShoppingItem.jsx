@@ -46,7 +46,7 @@ export const ShoppingItem = ({id, addItem}) => {
                     <div className="number-btns">
                         <div className="plus-minus">
                             <button onClick={decrement}>-</button>
-                                <p aria-label="quantity">{count}</p>
+                                <h3 aria-label="quantity">{count}</h3>
                             <button onClick={increment}>+</button>
                         </div>
                         <button onClick={() => addItem(product, count) }>Add to Cart</button>
