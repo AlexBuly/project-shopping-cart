@@ -1,5 +1,6 @@
 import { Home } from "../components/Home"
 import { Shop } from "../components/Shop"
+import { Cart } from "../components/Cart"
 import App from "../App";
 
 const routes = [
@@ -14,8 +15,11 @@ const routes = [
             },
             {
                 path: "shop",
-                element: <Shop/>
-
+                element: <Shop />,
+            },   
+            {
+                path: "cart",
+                element: <Cart />
             }
         ]
     }
