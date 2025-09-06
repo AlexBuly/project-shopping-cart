@@ -13,16 +13,38 @@
 
 button {
     cursor: pointer;
+    background-color: rgb(160, 8, 8);
+    color: white;
+    border-radius: 0.5em;
+    border: none;
+    padding: 0.5em;
+    transition: background-color, active-color 0.1s ease-in-out;
 }
+
+button:hover {
+    background-color: rgb(16, 16, 71);
+}
+
+button:active {
+    background-color: black;
+}
+
+
 
 body {
     background-color: var(--bg-color)
 }
 
 .number-btns {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 1em;
+}
+
+.plus-minus {
+    display: flex;
+    justify-content: space-around;
 }
 
 .product-image {
@@ -56,6 +78,7 @@ nav {
 .nav-link {
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 .nav-link:hover {
@@ -75,29 +98,42 @@ nav {
     min-width: 75%;
 }
 
-.item {
+.item, .cart-item {
     border: 3px solid;
     border-color: var(--secondary-color);
     color: var(--secondary-color);
     padding: 1em;
     background-color: rgb(213, 237, 245);
     border-radius: 0.5em;
+    text-align: center;
+}
+
+.cart-title {
+    text-align: center;
+}
+
+.cart-item {
+    width: 50%;
 }
 
 .cart {
     display: flex;
-    margin: 1em;
+    flex-direction: column;
+    align-items: center;
     gap: 1em;
-    justify-content: center;
 }
 
 .items {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.total {
+    padding: 1em;
 }
 
 .shopping-items {
-    display: flex;
     padding: 1em;
 }
 

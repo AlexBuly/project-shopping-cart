@@ -7,16 +7,21 @@ export const Cart = () => {
     }, 0)
     return (
         <>
-            <h2>Your Cart</h2>
-            {cartItems.length === 0 && <p>No items yet.</p>}
-            {cartItems.map((item, i) => (
-                <p key={i}>
-                    <b>{item.title} x {item.quantity}</b>{' '}
-                    {'$'}{ item.price * item.quantity }
-                    <button onClick={() => removeFromCart(item.id)}>Remove Item</button>
-                </p>
-            ))}
-           {cartItems.length === 0 ? <b>Total: $0 </b> : <b>Total: ${total.toFixed(2)} </b>}
+            <h2 className="cart-title">Your Cart:</h2>
+            <div className="cart">
+                {cartItems.length === 0 && <p>No items yet.</p>}
+                {cartItems.map((item, i) => (
+                    <p key={i} className="cart-item">
+                        <img src={item.image} className="product-image" alt="product-image" />
+                        <b>{item.title} x {item.quantity}</b>{' '}
+                        <br />
+                        {'$'}{ item.price * item.quantity }
+                        <br />
+                        <button onClick={() => removeFromCart(item.id)}>Remove Item</button>
+                    </p>
+                ))}
+                 <h2>Total: ${total.toFixed(2)}</h2>
+            </div>
         </>
     )
 }
