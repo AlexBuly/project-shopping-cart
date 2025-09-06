@@ -11,6 +11,27 @@
     --secondary-color: rgb(33, 33, 143);
 }
 
+.shop-link {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    font-size: x-large;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.shop-link:hover {
+    background-color: rgb(23, 23, 94); 
+}
+
+.shop-link:active {
+    background-color:rgb(14, 14, 61);
+}
+
+
+
+
 button {
     cursor: pointer;
     background-color: rgb(160, 8, 8);
@@ -18,15 +39,15 @@ button {
     border-radius: 0.5em;
     border: none;
     padding: 0.5em;
-    transition: background-color, active-color 0.1s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: rgb(16, 16, 71);
+    background-color: rgb(116, 6, 6);
 }
 
 button:active {
-    background-color: black;
+    background-color: rgb(85, 4, 4);
 }
 
 
@@ -59,13 +80,6 @@ body {
     padding: 1em;
 }
 
-/*.welcome {
-  display: flex;
-  justify-content: center; 
-  align-items: center;    
-  height: 100vh;    
-}*/
-
 nav {
     background-color: var(--secondary-color);
     display: flex;
@@ -92,10 +106,6 @@ nav {
 .bottom {
     display: flex;
     align-items: center;
-}
-
-.shop-link {
-    min-width: 75%;
 }
 
 .item, .cart-item {
