@@ -38,17 +38,19 @@ export const ShoppingItem = ({id, addItem}) => {
         <>
             <div className="shopping-items">
                 <div className="item">
-                    <p>{product.title}</p>
+                    <h3 className="product-title">{product.title}</h3>
                     <br />
                     <img src={product.image} className="product-image" alt="product-image" />
                     <br />
-                    <p>{product.price}</p>
+                    <p>${product.price.toFixed(2)}</p>
                     <div className="number-btns">
-                        <button onClick={decrement}>-</button>
-                        <p>{count}</p>
-                        <button onClick={increment}>+</button>
+                        <div className="plus-minus">
+                            <button onClick={decrement}>-</button>
+                                <p aria-label="quantity">{count}</p>
+                            <button onClick={increment}>+</button>
+                        </div>
+                        <button onClick={() => addItem(product, count) }>Add to Cart</button>
                     </div>
-                    <button onClick={() => addItem(product, count)}>Add to Cart</button>
                 </div>
             </div>
         </>
